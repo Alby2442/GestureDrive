@@ -1,5 +1,7 @@
 # GestureDrive
 
+Hand Gesture Controlled Hill Climb Racing Game Using Python
+
 **Drive with your hands. Conquer every hill.**
 
 ---
@@ -16,10 +18,10 @@
 - [Virtual Environment Setup](#virtual-environment-setup)
 - [Dependency Installation](#dependency-installation)
 - [Installation Verification](#installation-verification)
-- [Running the Application](#running-the-application)
+- [Running the Application](#running-application)
 - [Project Directory Structure](#project-directory-structure)
 - [Troubleshooting](#troubleshooting)
-- [Screenshots & Demo GIF](#screenshots--demo-gif)
+- [Screenshots \u0026 Demo GIF](#screenshots--demo-gif)
 - [Future Improvements](#future-improvements)
 - [Credits](#credits)
 - [License](#license)
@@ -44,8 +46,8 @@ GestureDrive is a **Python‑based computer‑vision** application that enables 
 |---|---|
 | Real‑time webcam hand detection | Captures frames at up to 30 FPS, mirrors preview for intuitive control. |
 | MediaPipe hand tracking | Utilises MediaPipe Hands (v0.10.21) for robust 21‑point landmark detection. |
-| Open palm & closed fist recognition | Simple geometry‑based classification, independent of hand rotation. |
-| Gesture smoothing & stability | Majority‑vote smoothing over recent frames and stability‑frame gating to eliminate flicker. |
+| Open palm \u0026 closed fist recognition | Simple geometry‑based classification, independent of hand rotation. |
+| Gesture smoothing \u0026 stability | Majority‑vote smoothing over recent frames and stability‑frame gating to eliminate flicker. |
 | Keyboard control integration | Thin `pyautogui` wrapper sends `right` (accelerate) and `left` (brake) keys. |
 | Hill Climb Racing window detection | Optional Windows API check (`win32gui`) ensures keys are sent only when the game is focused. |
 | Tkinter control dashboard | Live preview, calibration wizard, status overlay, and emergency‑stop button. |
@@ -58,9 +60,9 @@ GestureDrive is a **Python‑based computer‑vision** application that enables 
 ![Python](https://img.shields.io/badge/python-3.12%20|%203.11-blue) ![OpenCV](https://img.shields.io/badge/opencv-4.11.0.86-orange) ![MediaPipe](https://img.shields.io/badge/mediapipe-0.10.21-brightgreen) ![PyAutoGUI](https://img.shields.io/badge/pyautogui-0.9.54-lightgrey) ![Tkinter](https://img.shields.io/badge/Tkinter‑builtin‑purple)
 
 - **Python 3.12** (Windows installer) 
-- **OpenCV‑contrib‑python** – for video capture & image display. 
+- **OpenCV‑contrib‑python** – for video capture \u0026 image display. 
 - **MediaPipe** – hand‑landmark detection. 
-- **NumPy** – numeric arrays used by OpenCV & MediaPipe. 
+- **NumPy** – numeric arrays used by OpenCV \u0026 MediaPipe. 
 - **PyAutoGUI** – cross‑platform keyboard automation. 
 - **Tkinter** – native GUI for the dashboard. 
 - **Optional:** `pywin32` (window‑title focus detection) / `pydirectinput` (alternative key‑sending backend).
@@ -73,7 +75,7 @@ GestureDrive is a **Python‑based computer‑vision** application that enables 
 3. **Right‑Hand Selection** – `modules.hand_utils.pick_right_hand` picks the right hand, optionally swapping labels per user setting. 
 4. **Gesture Classification** – `modules.gesture_recognition.GestureRecognizer` analyses landmarks, applies smoothing, and outputs a high‑level gesture (`open_palm`, `closed_fist`, `none`) plus tilt information. 
 5. **Keyboard Controller** – `modules.keyboard_controller.KeyboardController` presses/release the mapped keys only while **control is active** and the game window is focused. 
-6. **Dashboard** – Tkinter UI shows live preview, FPS, current gesture, and status indicators; the user can toggle control (**S**) and invoke an emergency stop (**E**). 
+6. **Dashboard** – Tkinter UI shows live preview, FPS, current gesture, and status indicators; the user can toggle control (**S**) and invoke an emergency stop (**E**).
 
 ---
 
@@ -87,7 +89,7 @@ GestureDrive is a **Python‑based computer‑vision** application that enables 
 | **E** | – | Emergency stop – release every key |
 | **ESC** | – | Exit the application |
 
-> *Note:* The exact key symbols are configurable in `config.py` / `settings.json`.
+\u003e *Note:* The exact key symbols are configurable in `config.py` / `settings.json`.
 
 ---
 
@@ -101,23 +103,23 @@ GestureDrive is a **Python‑based computer‑vision** application that enables 
 
 ## Windows Installation
 ```powershell
-# 1️⃣ Clone / copy the repository to a local folder, e.g. C:\SchoolProject\GestureDrive
+# 1️⃣ Clone / copy the repository to a local folder, e.g. C:\\SchoolProject\\GestureDrive
 # 2️⃣ Open PowerShell in that folder
 # 3️⃣ (Optional) Bypass script‑execution policy for this session
 Set-ExecutionPolicy -Scope Process Bypass
 ```
-> If you prefer Command Prompt, use the corresponding `activate.bat` script instead of the PowerShell `activate` script.
+\u003e If you prefer Command Prompt, use the corresponding `activate.bat` script instead of the PowerShell `activate` script.
 
 ---
 
 ## Virtual Environment Setup
 ```powershell
-# Create a clean virtual environment named "venv"
+# Create a clean virtual environment named \"venv\"
 python -m venv venv
 # Activate it (PowerShell)
-.\venv\Scripts\Activate
+.\\venv\\Scripts\\Activate
 # Or activate in CMD
-venv\Scripts\activate.bat
+venv\\Scripts\\activate.bat
 ```
 
 ---
@@ -153,7 +155,7 @@ python main.py
 ```
 GestureDrive/                # repository root
 ├── main.py                # entry point (no changes required)
-├── config.py              # default settings & loader
+├── config.py              # default settings \u0026 loader
 ├── requirements.txt
 ├── check_install.py
 ├── README.md
@@ -176,9 +178,7 @@ GestureDrive/                # repository root
 ├── tests/                 # unit / integration tests
 │   ├── test_camera.py
 │   ├── test_gesture.py
-│   ├── test_keyboard.py
-│   └── synthetic.py
-└── settings.json          # user‑specific config (generated at runtime, ignored by Git)
+│   �... (truncated for brevity) ...
 ```
 
 ---
@@ -198,7 +198,7 @@ GestureDrive/                # repository root
 
 ## Visual Preview – Coming Soon
 
-> Visual assets (branding banner, demo GIF, and UI screenshots) are being prepared. Stay tuned for updates.
+\u003e Visual assets (branding banner, demo GIF, and UI screenshots) are being prepared. Stay tuned for updates.
 
 ---
 
